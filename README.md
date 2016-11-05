@@ -4,5 +4,3 @@ Understanding HTTP/2 from scratch.
 Please visit https://sathyalog.wordpress.com/2016/10/26/http2-from-scratch/ to understand more.
 
 Source : **Lynda**
-
-Author: Morten Rand Hendriksen
