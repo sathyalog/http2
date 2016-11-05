@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="CSS/header.css" type="text/css" media="all">
     <link rel="stylesheet" href="CSS/flexslider.css" type="text/css" media="all">
     <link rel="stylesheet" href="CSS/frontpage.css" type="text/css" media="all">
-    <link rel="stylesheet" href="CSS/stories.css" type="text/css" media="all">
-    <link rel="stylesheet" href="CSS/footer.css" type="text/css" media="all">
+    
 
     <script>
         /*! grunt-grunticon Stylesheet Loader - v2.1.6 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
@@ -364,7 +363,25 @@
             </ul>
         </nav><!-- .social-nav -->
     </footer><!-- .footer -->
-
+    <!-- load deferred styles-->
+    <noscript id="deferred-styles">
+        <link rel="stylesheet" href="CSS/stories.css" type="text/css" media="all">
+        <link rel="stylesheet" href="CSS/footer.css" type="text/css" media="all">
+    </noscript>
+    <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
+    <!-- end of deferred-styles -->
     <script src="JS/libs/jquery-2.1.3.min.js"></script>
     <script src="JS/libs/jquery.flexslider-min.js"></script>
     <script src="JS/flexslider.js"></script>
