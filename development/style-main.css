@@ -7,7 +7,7 @@ html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
-} 
+}
 
 body {
 	margin: 0;
@@ -401,11 +401,3 @@ a.content-button:hover {
 	background: $red;
 	color: $beige;
 }
-
-@import 'CSS/header';
-@import 'CSS/menu';
-@import 'CSS/frontpage';
-@import 'CSS/promo';
-@import 'CSS/stories';
-@import 'CSS/footer';
-@import 'CSS/flexslider';
