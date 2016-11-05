@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     autoprefixer = require('autoprefixer'),
     precss = require('precss'),
     imagemin = require('gulp-imagemin'),
+    php2html = require('gulp-php2html'),
     htmlmin = require('gulp-htmlmin'),
     minify = require('gulp-minify'),
     cssnano = require('cssnano'),
@@ -25,7 +26,8 @@ gulp.task('imageoptim', function() {
 
 // HTML
 gulp.task('html', function() {
-    return gulp.src(source + '*.html')
+    return gulp.src(source + '*.{html,php}')
+    .pipe(php2html())
     .pipe(htmlmin({
         collapseWhitespace: true,
         minifyJS: true,
