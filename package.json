@@ -6,6 +6,8 @@
   "readme": "reade.md",
   "main": "development/index.html",
   "scripts": {
+    "start": "gulp",
+    "postinstall": "npm install && gulp default",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Morten Rand-Hendriksen",
