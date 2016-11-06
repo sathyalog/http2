@@ -6,8 +6,7 @@
   "readme": "reade.md",
   "main": "development/index.html",
   "scripts": {
-    "start":"node app",
-    "postinstall":"gulp default", 
+    "postinstall":"gulp default",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Morten Rand-Hendriksen",
