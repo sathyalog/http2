@@ -27,7 +27,7 @@ gulp.task('imageoptim', function() {
 // HTML
 gulp.task('html', function() {
     return gulp.src(source + '*.{html,php}')
-    .pipe(php2html())
+    //.pipe(php2html())
     .pipe(htmlmin({
         collapseWhitespace: true,
         minifyJS: true,
