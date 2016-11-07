@@ -11,6 +11,7 @@ var gulp = require('gulp'),
     rev = require('gulp-rev'),
     revReplace = require('gulp-rev-replace'),
     revDel = require('rev-del'),
+    fs = require('fs'),
 
     limbo = 'limbo/',
     source = 'development/',
@@ -83,12 +84,20 @@ gulp.task('watch', function() {
     gulp.watch(source + 'images/**/*.{jpg,JPG}', ['imageoptim']);
 });
 
+var options = {
+  /*key: fs.readFileSync('./mykey.pem'),
+  cert: fs.readFileSync('./my-cert.pem')*/
+  key: './mykey.pem',
+  cert: './my-cert.pem'
+};
+
 // Run a livereload web server because lazy
 gulp.task('webserver', function() {
     gulp.src(dest)
     .pipe(webserver({
         livereload: true,
-        open: true
+        open: true,
+        https:options
     }));
 });
 
