@@ -8,8 +8,8 @@ Source : **https://mor10.com**
 
 How to Run this Project?
 
-You can start running this project with *gulp* command initially in command prompt.
+1. npm install
 
-This gulp will minify images,css,js and copy all files to production folder.
+2. run **gulp** command initially in command prompt. - will update all your changes to production folder with minification (Run this step if you made any changes in project..else directly step to 3).
 
-After gulp in command prompt, run *npm start* or *node server.js*
+3. run **npm start** or **node server.js**.
