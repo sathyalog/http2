@@ -1,11 +1,6 @@
 # http2
 Understanding HTTP/2 from scratch.
 
-Please visit https://sathyalog.wordpress.com/2016/10/26/http2-from-scratch/ to understand more.
-
-Reference : **https://mor10.com** and other blogs.
-
-
 How to Run this Project?
 
 1. npm install
