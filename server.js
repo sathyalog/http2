@@ -1,10 +1,10 @@
-const port = 3000
-const spdy = require('spdy')
-const express = require('express')
-const path = require('path')
-const fs = require('fs')
+var port = 3000
+var spdy = require('spdy')
+var express = require('express')
+var path = require('path')
+var fs = require('fs')
 
-const app = express();
+var app = express();
 
 app.use(function(req, res, next) {
   res.setHeader('Link', '<//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i,900,900i>; rel=prefetch,</style-main.css>;rel = prefetch,/CSS/header.css;rel = prefetch,<//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js>;rel = prefetch,</JS/libs/jquery.flexslider-min.js>;rel = prefetch,</images/mainpromo/welcome02-1600.jpg>;rel = prefetch');
