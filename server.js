@@ -21,7 +21,7 @@ const options = {
     key: fs.readFileSync(__dirname + '/mykey.pem'),
     cert:  fs.readFileSync(__dirname + '/my-cert.pem')
 }
-
+console.log(options)
 spdy
   .createServer(options, app)
   .listen(port, (error) => {
@@ -29,6 +29,6 @@ spdy
       console.error(error)
       return process.exit(1)
     } else {
-      console.log('Listening on port: ' + port + '.')
+      console.log('Listening on port: ' + port + '. Please run with https prefix.')
     }
   })
